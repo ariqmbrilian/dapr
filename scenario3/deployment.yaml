@@ -1,0 +1,85 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+ name: orchestrator-api-ingress
+ namespace: default
+ annotations:
+   cert-manager.io/cluster-issuer: "letsencrypt-prod"
+   nginx.ingress.kubernetes.io/proxy-body-size: 8m
+   nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+   nginx.ingress.kubernetes.io/rewrite-target: /
+   nginx.ingress.kubernetes.io/server-snippet: |
+       server_tokens off;
+       more_clear_headers Server;
+   nginx.ingress.kubernetes.io/configuration-snippet: |
+       expires -1;
+       add_header Pragma "no-cache";
+       add_header Cache-Control "no-cache, no-store, must-revalidate";
+spec:
+ ingressClassName: nginx
+ tls:
+ - hosts:
+   - orchestrator-api-temp.devstable.andalsoftware.com
+   secretName: tls-orchestrator-api-temp
+ rules:
+ - host: orchestrator-api-temp.devstable.andalsoftware.com
+   http:
+     paths:
+     - path: /
+       pathType: Prefix
+       backend:
+         service:
+           name: orchestrator-api
+           port:
+             number: 8080
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: orchestrator-api
+  name: orchestrator-api
+  namespace: default
+spec:
+  replicas: 1
+  strategy: {}
+  selector:
+    matchLabels:
+      app: orchestrator-api
+  template:
+    metadata:
+      labels:
+        app: orchestrator-api
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "orchestrator-workflow"
+        dapr.io/enable-api-logging: "true"
+        dapr.io/app-port: "8080"
+        dapr.io/config: "tracing"
+    spec:
+      imagePullSecrets:
+      - name: credential
+      containers:
+      - envFrom:
+        - configMapRef:
+           name: configmap
+        image: andalregistry2.azurecr.io/orchestrator.api:orchestrator-api-temp
+        imagePullPolicy: Always
+        name: orchestrator-api
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: orchestrator-api
+  name: orchestrator-api
+  namespace: default
+spec:
+  ports:
+  - name: "8080"
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: orchestrator-api

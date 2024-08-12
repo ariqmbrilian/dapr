@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+  labels:
+    app: app
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      labels:
+        app: app
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "app"
+        dapr.io/enable-api-logging: "true"
+        dapr.io/app-port: "5000"
+    spec:
+      containers:
+      - name: app
+        image: ariqmbrilian/public-image:python
+        ports:
+        - containerPort: 5000

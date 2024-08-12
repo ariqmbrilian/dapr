@@ -1,0 +1,7 @@
+== APP - python ==  * Serving Flask app 'app'
+== APP - python ==  * Debug mode: off
+== APP - python == WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+== APP - python ==  * Running on all addresses (0.0.0.0)
+== APP - python ==  * Running on http://127.0.0.1:5000
+== APP - python ==  * Running on http://10.224.0.195:5000
+== APP - python == Press CTRL+C to quit

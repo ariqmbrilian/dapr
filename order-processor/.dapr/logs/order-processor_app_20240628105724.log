@@ -1,0 +1,25 @@
+== APP - order-processor == *** Welcome to the Dapr Workflow console app sample!
+== APP - order-processor == *** Using this app, you can place orders that start workflows.
+== APP - order-processor == 2024-06-28 03:57:36.895 WorkflowRuntime INFO: Registering workflow 'order_processing_workflow' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering workflow 'order_processing_workflow' with runtime
+== APP - order-processor == 2024-06-28 03:57:36.896 WorkflowRuntime INFO: Registering activity 'notify_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'notify_activity' with runtime
+== APP - order-processor == 2024-06-28 03:57:36.896 WorkflowRuntime INFO: Registering activity 'requst_approval_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'requst_approval_activity' with runtime
+== APP - order-processor == 2024-06-28 03:57:36.896 WorkflowRuntime INFO: Registering activity 'verify_inventory_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'verify_inventory_activity' with runtime
+== APP - order-processor == 2024-06-28 03:57:36.896 WorkflowRuntime INFO: Registering activity 'process_payment_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'process_payment_activity' with runtime
+== APP - order-processor == 2024-06-28 03:57:36.896 WorkflowRuntime INFO: Registering activity 'update_inventory_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'update_inventory_activity' with runtime
+== APP - order-processor == 2024-06-28 03:57:36.900 durabletask-worker INFO: Starting gRPC worker that connects to dns:127.0.0.1:50001
+== APP - order-processor == 2024-06-28 03:57:36.904 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:57:41.904 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:57:46.905 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:57:51.905 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:57:56.906 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:58:01.907 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:58:06.907 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:58:11.908 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:58:16.909 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying
+== APP - order-processor == 2024-06-28 03:58:21.910 durabletask-worker WARNING: The sidecar at address dns:127.0.0.1:50001 is unavailable - will continue retrying

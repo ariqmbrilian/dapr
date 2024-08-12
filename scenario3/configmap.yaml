@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+  namespace: default
+data:
+  ASPNETCORE_ENVIRONMENT: develop
+  AZURE_STORAGE_CONNECTION_STRING: DefaultEndpointsProtocol=https;AccountName=andaldeveloperstorage;AccountKey=1Vqug+nB4NzR5VkDNK+cvvTbm+JTOUOqx/muN6ggGU+4wKgM6gr+TP7juipefG2j1CkxaB7UzOjs+AStIGyBgw==;EndpointSuffix=core.windows.net
+  AttendanceConnectionString: Host=192.168.99.183;Database=andal_kharisma;Port=5432;Username=postgres;Password=P@ssw0rd;Minimum Pool Size=100;Maximum Pool Size=300;
+  PayrollConnectionString: Host=192.168.99.183;Database=andal_kharisma;Port=5432;Username=postgres;Password=P@ssw0rd;Minimum Pool Size=100;Maximum Pool Size=300;
+  AIMConnectionString: Host=192.168.99.183;Database=aim;Port=5432;Username=postgres;Password=P@ssw0rd;Minimum Pool Size=100;Maximum Pool Size=300;
+  RedisConnectionString: 192.168.24.66:6379,password=Task2022
+  SAIS_API_ENDPOINT: https://api.dev.andalsoftware.com/aim-public
+  # AIM = SAIS
+  AIM_URL: https://sais.dev.andalsoftware.com
+  # AK = IDENTITY
+  AK_URL: https://identity.dev.andalsoftware.com
+  ATTENDANCE_URL: https://attendance-api.dev.andalsoftware.com/graphql
+  HRMS_URL: https://hrms-api.dev.andalsoftware.com/graphql
+  PAYROLL_URL: https://payroll-api.dev.andalsoftware.com/graphql
+  MIGRATION_URL: https://migration-api.dev.andalsoftware.com/graphql
+  ORCHESTRATOR_URL: https://orchestrator-api-temp.devstable.andalsoftware.com/graphql
+  isProduction: "false"
+  KEYCLOAK_URL: https://keycloak.dev.andalsoftware.com
+  KEYCLOAK_REALM: AIM
+  KEYCLOAK_CLIENT_ID: aimapps
+  KEYCLOAK_CLIENT_SECRET: d5ef3879-3018-465e-8e98-e382d335cb80
+  AIM_EMAIL_SENDER: monica@andalsoftware.com
+  AIM_EMAIL_HOST: 40f8577ea9ef0a21ffcbe9a527233378
+  AIM_EMAIL_KEY: e70c90fd7ffa2d2397aa7ce1021ec86b
+  AIM_EMAIL_SMTP_CLIENT: in-v3.mailjet.com
+  AIM_EMAIL_SMTP_PORT: "587"
+  AIM_EMAIL_ENABLE_SSL: "true"
+  Prometheus__UseDebuggingMetrics: "true"
+  KAFKA_URL_DEBEZIUM: 192.168.24.57:9092
+  HRMS_CONSUMER_GROUP: "dev-hrms-consumer-group"
+  ATTENDANCE_CONSUMER_GROUP: "dev-attendance-consumer-group"
+  PAYROLL_CONSUMER_GROUP: "dev-payroll-consumer-group"
+  ORCHESTRATOR_CONSUMER_GROUP: "dev-orchestrator-consumer-group"

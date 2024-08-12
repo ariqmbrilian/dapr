@@ -1,0 +1,69 @@
+Starting Dapr with id order-processor. HTTP Port: 38141. gRPC Port: 36919
+Checking if Dapr sidecar is listening on HTTP port 38141
+time="2024-06-27T15:49:46.75447512+07:00" level=info msg="Starting Dapr Runtime -- version 1.13.4 -- commit b18d9516f0eff06f8fdacd36e8bdf290909b05d9" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.754523414+07:00" level=info msg="Log level set to: info" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.75471653+07:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=order-processor instance=infra scope=dapr.runtime.security type=log ver=1.13.4
+time="2024-06-27T15:49:46.75531503+07:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.14" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.756343551+07:00" level=info msg="metrics server started on :42317/" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.756667635+07:00" level=info msg="standalone mode configured" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.756713238+07:00" level=info msg="app id: order-processor" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.756796532+07:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.757679045+07:00" level=info msg="local service entry announced: order-processor -> 192.168.24.60:34123" app_id=order-processor component="nr (mdns/v1)" instance=infra scope=dapr.contrib type=log ver=1.13.4
+time="2024-06-27T15:49:46.75787922+07:00" level=info msg="Initialized name resolution to mdns" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.758029695+07:00" level=info msg="Loading components…" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.758990438+07:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.76143745+07:00" level=info msg="Using 'statestore' as actor state store" app_id=order-processor instance=infra scope=dapr.runtime.processor.state type=log ver=1.13.4
+time="2024-06-27T15:49:46.761531383+07:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=order-processor instance=infra scope=dapr.runtime.processor type=log ver=1.13.4
+time="2024-06-27T15:49:46.761564712+07:00" level=info msg="All outstanding components processed" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.761586808+07:00" level=info msg="Loading endpoints…" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.761795268+07:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.761820965+07:00" level=info msg="All outstanding http endpoints processed" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.761835074+07:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=order-processor instance=infra scope=dapr.runtime.channels type=log ver=1.13.4
+time="2024-06-27T15:49:46.761934946+07:00" level=info msg="gRPC server listening on TCP address: :36919" app_id=order-processor instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-27T15:49:46.761951252+07:00" level=info msg="Enabled gRPC tracing middleware" app_id=order-processor instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-27T15:49:46.761959947+07:00" level=info msg="Enabled gRPC metrics middleware" app_id=order-processor instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-27T15:49:46.762081491+07:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:36919" app_id=order-processor instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-27T15:49:46.762125407+07:00" level=info msg="API gRPC server is running on port 36919" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762216707+07:00" level=info msg="Enabled max body size HTTP middleware with size 4 MB" app_id=order-processor instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-27T15:49:46.762234616+07:00" level=info msg="Enabled tracing HTTP middleware" app_id=order-processor instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-27T15:49:46.76224348+07:00" level=info msg="Enabled metrics HTTP middleware" app_id=order-processor instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-27T15:49:46.762594433+07:00" level=info msg="HTTP server listening on TCP address: :38141" app_id=order-processor instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-27T15:49:46.762632758+07:00" level=info msg="HTTP server is running on port 38141" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762648856+07:00" level=info msg="The request body size parameter is: 4" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762684555+07:00" level=info msg="gRPC server listening on TCP address: :34123" app_id=order-processor instance=infra scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-27T15:49:46.762697889+07:00" level=info msg="Enabled gRPC tracing middleware" app_id=order-processor instance=infra scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-27T15:49:46.762706332+07:00" level=info msg="Enabled gRPC metrics middleware" app_id=order-processor instance=infra scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-27T15:49:46.762742706+07:00" level=info msg="Internal gRPC server is running on port 34123" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762817229+07:00" level=info msg="Configuring actors placement provider 'placement'. Configuration: 'placement:localhost:50005'" app_id=order-processor instance=infra scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-27T15:49:46.762840533+07:00" level=info msg="Configuring actor reminders provider 'default'. Configuration: ''" app_id=order-processor instance=infra scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-27T15:49:46.762909078+07:00" level=info msg="Actor runtime started. Actor idle timeout: 1h0m0s. Actor scan interval: 30s" app_id=order-processor instance=infra scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-27T15:49:46.762925183+07:00" level=info msg="Configuring workflow engine with actors backend" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762934007+07:00" level=info msg="Registering component for dapr workflow engine..." app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762947672+07:00" level=info msg="Initializing Dapr workflow component" app_id=order-processor component="dapr (workflow.dapr/v1)" instance=infra scope=dapr.contrib type=log ver=1.13.4
+time="2024-06-27T15:49:46.762967844+07:00" level=info msg="Workflow engine initialized." app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762980309+07:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.762991145+07:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 6ms" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:46.777991942+07:00" level=info msg="Actor API level in the cluster has been updated to 10" app_id=order-processor instance=infra scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-27T15:49:46.77805405+07:00" level=info msg="Placement tables updated, version: 2" app_id=order-processor instance=infra scope=dapr.runtime.actors.placement type=log ver=1.13.4
+Checking if Dapr sidecar is listening on GRPC port 36919
+Dapr sidecar is up and running.
+Updating metadata for cliPID: 27378
+Updating metadata for app command: python3 app.py
+Updating metadata for appPID: 27412
+You're up and running! Dapr logs will appear here.
+
+time="2024-06-27T15:49:52.966014397+07:00" level=info msg="work item stream established by user-agent: [grpc-python/1.64.1 grpc-c/41.0.0 (linux; chttp2)]" app_id=order-processor instance=infra scope=dapr.runtime.wfengine type=log ver=1.13.4
+time="2024-06-27T15:49:52.966098315+07:00" level=info msg="worker started with backend dapr.actors/v1-beta" app_id=order-processor instance=infra scope=wfengine.durabletask.backend type=log ver=1.13.4
+time="2024-06-27T15:49:52.966146805+07:00" level=info msg="Workflow engine started" app_id=order-processor instance=infra scope=dapr.runtime.wfengine type=log ver=1.13.4
+time="2024-06-27T15:49:52.971057657+07:00" level=info msg="Error processing operation DaprBuiltInActorNotFoundRetries. Retrying in 1s…" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:55.987662516+07:00" level=info msg="Placement tables updated, version: 3" app_id=order-processor instance=infra scope=dapr.runtime.actors.placement type=log ver=1.13.4
+time="2024-06-27T15:49:56.973338436+07:00" level=info msg="Recovered processing operation DaprBuiltInActorNotFoundRetries after 5 attempts" app_id=order-processor instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-27T15:49:56.974766971+07:00" level=warning msg="Redis does not support transaction rollbacks and should not be used in production as an actor state store." app_id=order-processor component="statestore (state.redis/v1)" instance=infra scope=dapr.contrib type=log ver=1.13.4
+time="2024-06-27T15:49:56.976453129+07:00" level=info msg="12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: starting new 'order_processing_workflow' instance with ID = '12d1cbdf-efc0-4b2d-9cda-fda60b1f3728'." app_id=order-processor instance=infra scope=wfengine.durabletask.backend type=log ver=1.13.4
+time="2024-06-27T15:50:07.017414243+07:00" level=info msg="12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: 'order_processing_workflow' completed with a COMPLETED status." app_id=order-processor instance=infra scope=wfengine.durabletask.backend type=log ver=1.13.4
+time="2024-06-27T15:50:07.017840079+07:00" level=info msg="Workflow Actor '12d1cbdf-efc0-4b2d-9cda-fda60b1f3728': workflow completed with status 'ORCHESTRATION_STATUS_COMPLETED' workflowName 'order_processing_workflow'" app_id=order-processor instance=infra scope=dapr.wfengine.backend.actors type=log ver=1.13.4
+
+termination signal received: shutting down
+time="2024-06-27T15:50:34.216245486+07:00" level=info msg="Received signal 'interrupt'; beginning shutdown" app_id=order-processor instance=infra scope=dapr.signals type=log ver=1.13.4
+Exited Dapr successfully
+Exited App successfully

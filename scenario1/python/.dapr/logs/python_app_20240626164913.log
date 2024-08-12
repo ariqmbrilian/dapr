@@ -1,0 +1,10 @@
+== APP - python ==  * Serving Flask app 'app'
+== APP - python ==  * Debug mode: off
+== APP - python == WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+== APP - python ==  * Running on all addresses (0.0.0.0)
+== APP - python ==  * Running on http://127.0.0.1:5000
+== APP - python ==  * Running on http://192.168.24.60:5000
+== APP - python == Press CTRL+C to quit
+== APP - python == 127.0.0.1 - - [26/Jun/2024 16:50:03] "GET /hello/ariq HTTP/1.1" 200 -
+
+termination signal received: shutting down

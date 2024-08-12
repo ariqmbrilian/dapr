@@ -1,0 +1,60 @@
+Starting Dapr with id python. HTTP Port: 44755. gRPC Port: 45135
+Checking if Dapr sidecar is listening on HTTP port 44755
+time="2024-06-26T16:49:13.67026794+07:00" level=info msg="Starting Dapr Runtime -- version 1.13.4 -- commit b18d9516f0eff06f8fdacd36e8bdf290909b05d9" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.670485029+07:00" level=info msg="Log level set to: info" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.670908929+07:00" level=warning msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=python instance=infra scope=dapr.runtime.security type=log ver=1.13.4
+time="2024-06-26T16:49:13.671892983+07:00" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.14" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.673653066+07:00" level=info msg="standalone mode configured" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.67375685+07:00" level=info msg="app id: python" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.673797841+07:00" level=info msg="metrics server started on :45549/" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.673940025+07:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.674885892+07:00" level=info msg="local service entry announced: python -> 192.168.24.60:35921" app_id=python component="nr (mdns/v1)" instance=infra scope=dapr.contrib type=log ver=1.13.4
+time="2024-06-26T16:49:13.674940873+07:00" level=info msg="Initialized name resolution to mdns" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.675066133+07:00" level=info msg="Loading components…" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.680150207+07:00" level=info msg="Component loaded: pubsub (pubsub.redis/v1)" app_id=python instance=infra scope=dapr.runtime.processor type=log ver=1.13.4
+time="2024-06-26T16:49:13.680355574+07:00" level=info msg="Waiting for all outstanding components to be processed…" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.683028183+07:00" level=info msg="Using 'statestore' as actor state store" app_id=python instance=infra scope=dapr.runtime.processor.state type=log ver=1.13.4
+time="2024-06-26T16:49:13.683158732+07:00" level=info msg="Component loaded: statestore (state.redis/v1)" app_id=python instance=infra scope=dapr.runtime.processor type=log ver=1.13.4
+time="2024-06-26T16:49:13.683216925+07:00" level=info msg="All outstanding components processed" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.683282056+07:00" level=info msg="Loading endpoints…" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.683823877+07:00" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.683899193+07:00" level=info msg="All outstanding http endpoints processed" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.683944111+07:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=python instance=infra scope=dapr.runtime.channels type=log ver=1.13.4
+time="2024-06-26T16:49:13.684115673+07:00" level=info msg="gRPC server listening on TCP address: :45135" app_id=python instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T16:49:13.684169699+07:00" level=info msg="Enabled gRPC tracing middleware" app_id=python instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T16:49:13.68418796+07:00" level=info msg="Enabled gRPC metrics middleware" app_id=python instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T16:49:13.684400406+07:00" level=info msg="Registering workflow engine for gRPC endpoint: [::]:45135" app_id=python instance=infra scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T16:49:13.684505952+07:00" level=info msg="API gRPC server is running on port 45135" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.684680591+07:00" level=info msg="Enabled max body size HTTP middleware with size 4 MB" app_id=python instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T16:49:13.684721097+07:00" level=info msg="Enabled tracing HTTP middleware" app_id=python instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T16:49:13.684738699+07:00" level=info msg="Enabled metrics HTTP middleware" app_id=python instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T16:49:13.685350957+07:00" level=info msg="HTTP server listening on TCP address: :44755" app_id=python instance=infra scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T16:49:13.685443148+07:00" level=info msg="HTTP server is running on port 44755" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.685465101+07:00" level=info msg="The request body size parameter is: 4" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.685519661+07:00" level=info msg="gRPC server listening on TCP address: :35921" app_id=python instance=infra scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-26T16:49:13.685547152+07:00" level=info msg="Enabled gRPC tracing middleware" app_id=python instance=infra scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-26T16:49:13.685563352+07:00" level=info msg="Enabled gRPC metrics middleware" app_id=python instance=infra scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-26T16:49:13.685657208+07:00" level=info msg="Internal gRPC server is running on port 35921" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.685879676+07:00" level=info msg="Configuring actors placement provider 'placement'. Configuration: 'placement:localhost:50005'" app_id=python instance=infra scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-26T16:49:13.685944981+07:00" level=info msg="Configuring actor reminders provider 'default'. Configuration: ''" app_id=python instance=infra scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-26T16:49:13.68603003+07:00" level=info msg="Actor runtime started. Actor idle timeout: 1h0m0s. Actor scan interval: 30s" app_id=python instance=infra scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-26T16:49:13.686068923+07:00" level=info msg="Configuring workflow engine with actors backend" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.686091593+07:00" level=info msg="Registering component for dapr workflow engine..." app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.686132041+07:00" level=info msg="Initializing Dapr workflow component" app_id=python component="dapr (workflow.dapr/v1)" instance=infra scope=dapr.contrib type=log ver=1.13.4
+time="2024-06-26T16:49:13.686175092+07:00" level=info msg="Workflow engine initialized." app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.68620443+07:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=python instance=infra scope=dapr.runtime.processor.pubsub type=log ver=1.13.4
+time="2024-06-26T16:49:13.686245286+07:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.686277433+07:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 12ms" app_id=python instance=infra scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T16:49:13.718722823+07:00" level=info msg="Placement tables updated, version: 0" app_id=python instance=infra scope=dapr.runtime.actors.placement type=log ver=1.13.4
+Checking if Dapr sidecar is listening on GRPC port 45135
+Dapr sidecar is up and running.
+Updating metadata for cliPID: 65926
+Updating metadata for app command: python3 app.py
+Updating metadata for appPID: 65960
+You're up and running! Dapr logs will appear here.
+
+
+termination signal received: shutting down
+time="2024-06-26T16:51:00.375923003+07:00" level=info msg="Received signal 'interrupt'; beginning shutdown" app_id=python instance=infra scope=dapr.signals type=log ver=1.13.4
+Exited Dapr successfully
+Exited App successfully

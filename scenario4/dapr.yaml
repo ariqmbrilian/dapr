@@ -1,0 +1,11 @@
+version: 1
+common:
+  resourcesPath: ./components
+apps:
+  - appID: basic-workflows
+    appDirPath: .
+    appPort: 5004
+    daprHTTPPort: 3500
+    command: ["dotnet", "run"]
+    applogDestination: console
+    daprdLogDestination: console

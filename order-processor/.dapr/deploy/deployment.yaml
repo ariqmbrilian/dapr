@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-processor
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: order-processor
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        dapr.io/app-id: order-processor
+        dapr.io/config: appconfig
+        dapr.io/enabled: "true"
+        dapr.io/metrics-port: "46385"
+        dapr.io/unix-domain-socket-path: ""
+      creationTimestamp: null
+      labels:
+        app: order-processor
+    spec:
+      containers:
+      - env:
+        - name: DAPR_HTTP_PORT
+          value: "3500"
+        - name: DAPR_METRICS_PORT
+          value: "46385"
+        - name: APP_ID
+          value: order-processor
+        - name: APP_CHANNEL_ADDRESS
+        image: ariqmbrilian/public-image:app
+        imagePullPolicy: Always
+        name: order-processor
+        resources: {}

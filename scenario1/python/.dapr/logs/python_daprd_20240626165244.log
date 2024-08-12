@@ -1,0 +1,63 @@
+time="2024-06-26T09:52:58.124899014Z" level=info msg="Starting Dapr Runtime -- version 1.13.4 -- commit b18d9516f0eff06f8fdacd36e8bdf290909b05d9" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.124922557Z" level=info msg="Log level set to: info" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.125133897Z" level=info msg="Fetching initial identity certificate from dapr-sentry.dapr-system.svc.cluster.local:443" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.security type=log ver=1.13.4
+time="2024-06-26T09:52:58.152772379Z" level=info msg="Security is initialized successfully" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.security type=log ver=1.13.4
+time="2024-06-26T09:52:58.152825082Z" level=info msg="Starting workload cert expiry watcher; current cert expires on: 2024-06-27 09:52:58 +0000 UTC, renewing at 2024-06-27 02:36:28 +0000 UTC" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.security type=log ver=1.13.4
+time="2024-06-26T09:52:58.152989848Z" level=info msg="Initializing the operator client" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.193949183Z" level=warning msg="The default value for 'spec.metric.http.increasedCardinality' will change to 'false' in Dapr 1.14" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.203580906Z" level=info msg="metrics server started on :43203/" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.203816118Z" level=info msg="kubernetes mode configured" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.203836658Z" level=info msg="app id: python" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.203876627Z" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.203982707Z" level=info msg="Initialized name resolution to kubernetes" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:52:58.204387117Z" level=info msg="Component loaded: kubernetes (secretstores.kubernetes/v1)" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.processor type=log ver=1.13.4
+time="2024-06-26T09:52:58.204430615Z" level=info msg="Loading components…" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.28378873Z" level=error msg="Failed to init component statestore (state.redis/v1): [INIT_COMPONENT_FAILURE]: initialization error occurred for statestore (state.redis/v1): redis store: error connecting to redis at localhost:6379: dial tcp [::1]:6379: connect: connection refused" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.processor type=log ver=1.13.4
+time="2024-06-26T09:53:01.283832509Z" level=warning msg="Error processing component, daprd will exit gracefully" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.processor type=log ver=1.13.4
+time="2024-06-26T09:53:01.283853774Z" level=info msg="Waiting for all outstanding components to be processed…" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.283879158Z" level=info msg="All outstanding components processed" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.283923614Z" level=info msg="Loading endpoints…" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.284541305Z" level=info msg="Waiting for all outstanding http endpoints to be processed…" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.284560609Z" level=info msg="All outstanding http endpoints processed" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.284573824Z" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.channels type=log ver=1.13.4
+time="2024-06-26T09:53:01.284686057Z" level=info msg="gRPC server listening on TCP address: [::1]:50001" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.28472015Z" level=info msg="gRPC server listening on TCP address: 127.0.0.1:50001" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.284738457Z" level=info msg="Enabled gRPC tracing middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.284747365Z" level=info msg="Enabled gRPC metrics middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.284826062Z" level=info msg="Registering workflow engine for gRPC endpoint: [::1]:50001" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.284870376Z" level=info msg="Enabled gRPC tracing middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.284882821Z" level=info msg="Enabled gRPC metrics middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.284923404Z" level=info msg="Registering workflow engine for gRPC endpoint: 127.0.0.1:50001" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.api type=log ver=1.13.4
+time="2024-06-26T09:53:01.284950857Z" level=info msg="API gRPC server is running on port 50001" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285017782Z" level=info msg="Enabled max body size HTTP middleware with size 4 MB" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.285035753Z" level=info msg="Enabled tracing HTTP middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.285050514Z" level=info msg="Enabled metrics HTTP middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.285404131Z" level=info msg="HTTP server listening on TCP address: [::1]:3500" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.285428948Z" level=info msg="HTTP server listening on TCP address: 127.0.0.1:3500" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.28545505Z" level=info msg="Enabled tracing HTTP middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.285468329Z" level=info msg="Enabled metrics HTTP middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.285526434Z" level=info msg="HTTP server is running on port 3500" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285541253Z" level=info msg="The request body size parameter is: 4" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285568083Z" level=info msg="gRPC server listening on TCP address: :50002" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-26T09:53:01.285583834Z" level=info msg="Enabled gRPC tracing middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-26T09:53:01.285591719Z" level=info msg="Enabled gRPC metrics middleware" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.grpc.internal type=log ver=1.13.4
+time="2024-06-26T09:53:01.28564019Z" level=info msg="Internal gRPC server is running on port 50002" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285694445Z" level=info msg="actors: state store is not configured - this is okay for clients but services with hosted actors will fail to initialize!" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285730584Z" level=info msg="Configuring actors placement provider 'placement'. Configuration: 'placement:dapr-placement-server.dapr-system.svc.cluster.local:50005'" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-26T09:53:01.285754779Z" level=info msg="Configuring actor reminders provider 'default'. Configuration: ''" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-26T09:53:01.285785252Z" level=info msg="Actor runtime started. Actor idle timeout: 1h0m0s. Actor scan interval: 30s" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.actor type=log ver=1.13.4
+time="2024-06-26T09:53:01.285805631Z" level=info msg="Configuring workflow engine with actors backend" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285819093Z" level=info msg="Registering component for dapr workflow engine..." app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285828772Z" level=info msg="Initializing Dapr workflow component" app_id=python component="dapr (workflow.dapr/v1)" instance=python-7f745df644-xlz2s scope=dapr.contrib type=log ver=1.13.4
+time="2024-06-26T09:53:01.285842664Z" level=info msg="Workflow engine initialized." app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285865468Z" level=warning msg="failed to read from bindings: app channel not initialized " app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285877665Z" level=info msg="dapr initialized. Status: Running. Init Elapsed 3082ms" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285956341Z" level=info msg="Dapr is shutting down" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.285985012Z" level=info msg="Shutting down component kubernetes (secretstores.kubernetes/v1)" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.286003755Z" level=info msg="Dapr runtime stopped" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.286012898Z" level=info msg="Shutting down workflow engine" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.286028425Z" level=info msg="Shutting down actor" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4
+time="2024-06-26T09:53:01.286076259Z" level=info msg="Closing HTTP server :3501…" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.286145001Z" level=info msg="Closing HTTP server [::1]:3500…" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.286155495Z" level=info msg="Closing HTTP server 127.0.0.1:3500…" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime.http type=log ver=1.13.4
+time="2024-06-26T09:53:01.286276497Z" level=fatal msg="Fatal error from runtime: process component statestore error: [INIT_COMPONENT_FAILURE]: initialization error occurred for statestore (state.redis/v1): [INIT_COMPONENT_FAILURE]: initialization error occurred for statestore (state.redis/v1): redis store: error connecting to redis at localhost:6379: dial tcp [::1]:6379: connect: connection refused" app_id=python instance=python-7f745df644-xlz2s scope=dapr.runtime type=log ver=1.13.4

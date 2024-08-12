@@ -1,0 +1,3 @@
+Starting Dapr with id python. HTTP Port: 32919. gRPC Port: 36753
+Error starting daprd process: fork/exec /home/manage/.dapr/bin/daprd: no such file or directory
+Error starting Dapr and app ("python"): fork/exec /home/manage/.dapr/bin/daprd: no such file or directory

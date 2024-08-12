@@ -1,0 +1,6 @@
+version: 1
+apps:
+  - appDirPath: ./python
+    appId: app
+    # command: ["python3", "app.py"]
+    containerImage: ariqmbrilian/public-image:python

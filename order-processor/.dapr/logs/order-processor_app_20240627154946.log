@@ -1,0 +1,53 @@
+== APP - order-processor == *** Welcome to the Dapr Workflow console app sample!
+== APP - order-processor == *** Using this app, you can place orders that start workflows.
+== APP - order-processor == 2024-06-27 15:49:52.951 WorkflowRuntime INFO: Registering workflow 'order_processing_workflow' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering workflow 'order_processing_workflow' with runtime
+== APP - order-processor == 2024-06-27 15:49:52.952 WorkflowRuntime INFO: Registering activity 'notify_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'notify_activity' with runtime
+== APP - order-processor == 2024-06-27 15:49:52.952 WorkflowRuntime INFO: Registering activity 'requst_approval_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'requst_approval_activity' with runtime
+== APP - order-processor == 2024-06-27 15:49:52.952 WorkflowRuntime INFO: Registering activity 'verify_inventory_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'verify_inventory_activity' with runtime
+== APP - order-processor == 2024-06-27 15:49:52.952 WorkflowRuntime INFO: Registering activity 'process_payment_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'process_payment_activity' with runtime
+== APP - order-processor == 2024-06-27 15:49:52.952 WorkflowRuntime INFO: Registering activity 'update_inventory_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'update_inventory_activity' with runtime
+== APP - order-processor == 2024-06-27 15:49:52.957 durabletask-worker INFO: Starting gRPC worker that connects to dns:127.0.0.1:36919
+== APP - order-processor == 2024-06-27 15:49:52.966 durabletask-worker INFO: Successfully connected to dns:127.0.0.1:36919. Waiting for work items...
+== APP - order-processor == item: InventoryItem(item_name=Paperclip, per_item_cost=5, quantity=100)
+== APP - order-processor == item: InventoryItem(item_name=Cars, per_item_cost=15000, quantity=100)
+== APP - order-processor == item: InventoryItem(item_name=Computers, per_item_cost=500, quantity=100)
+== APP - order-processor == ==========Begin the purchase of item:==========
+== APP - order-processor == Starting order workflow, purchasing 10 of cars
+== APP - order-processor == app.py:49: UserWarning: The Workflow API is a Beta version and is subject to change.
+== APP - order-processor ==   start_resp = daprClient.start_workflow(workflow_component=workflow_component,
+== APP - order-processor == app.py:86: UserWarning: The Workflow API is a Beta version and is subject to change.
+== APP - order-processor ==   state = daprClient.get_workflow(instance_id=_id, workflow_component=workflow_component)
+== APP - order-processor == 2024-06-27 15:49:56.978 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 1 task(s) and 0 event(s) outstanding.
+== APP - order-processor == INFO:NotifyActivity:Received order 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 for 10 cars at $150000 !
+== APP - order-processor == 2024-06-27 15:49:56.987 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 1 task(s) and 0 event(s) outstanding.
+== APP - order-processor == INFO:VerifyInventoryActivity:Verifying inventory for order 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 of 10 cars
+== APP - order-processor == INFO:VerifyInventoryActivity:There are 100 Cars available for purchase
+== APP - order-processor == 2024-06-27 15:49:56.999 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 1 task(s) and 0 event(s) outstanding.
+== APP - order-processor == INFO:RequestApprovalActivity:Requesting approval for payment of 150000 USD for 10 cars
+== APP - order-processor == 2024-06-27 15:49:57.005 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 1 task(s) and 1 event(s) outstanding.
+== APP - order-processor == app.py:95: UserWarning: The Workflow API is a Beta version and is subject to change.
+== APP - order-processor ==   state = daprClient.get_workflow(instance_id=_id, workflow_component=workflow_component)
+== APP - order-processor == app.py:79: UserWarning: The Workflow API is a Beta version and is subject to change.
+== APP - order-processor ==   daprClient.raise_workflow_event(instance_id=_id, workflow_component=workflow_component,
+== APP - order-processor == 2024-06-27 15:50:06.983 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 Event raised: manager_approval
+== APP - order-processor == 2024-06-27 15:50:06.983 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 2 task(s) and 0 event(s) outstanding.
+== APP - order-processor == INFO:NotifyActivity:Payment for order 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 has been approved!
+== APP - order-processor == 2024-06-27 15:50:06.990 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 2 task(s) and 0 event(s) outstanding.
+== APP - order-processor == INFO:ProcessPaymentActivity:Processing payment: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 for 10 cars at 150000 USD
+== APP - order-processor == INFO:ProcessPaymentActivity:Payment for request ID 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 processed successfully
+== APP - order-processor == 2024-06-27 15:50:06.997 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 2 task(s) and 0 event(s) outstanding.
+== APP - order-processor == INFO:UpdateInventoryActivity:Checking inventory for order 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 for 10 cars
+== APP - order-processor == INFO:UpdateInventoryActivity:There are now 90 cars left in stock
+== APP - order-processor == 2024-06-27 15:50:07.011 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestrator yielded with 2 task(s) and 0 event(s) outstanding.
+== APP - order-processor == INFO:NotifyActivity:Order 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728 has completed!
+== APP - order-processor == 2024-06-27 15:50:07.016 durabletask-worker INFO: 12d1cbdf-efc0-4b2d-9cda-fda60b1f3728: Orchestration completed with status: COMPLETED
+== APP - order-processor == Workflow completed! Result: Completed
+== APP - order-processor == Purchase of item is  Completed
+
+termination signal received: shutting down

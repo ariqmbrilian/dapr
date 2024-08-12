@@ -1,0 +1,23 @@
+== APP - order-processor == *** Welcome to the Dapr Workflow console app sample!
+== APP - order-processor == *** Using this app, you can place orders that start workflows.
+== APP - order-processor == 2024-06-27 15:52:16.063 WorkflowRuntime INFO: Registering workflow 'order_processing_workflow' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering workflow 'order_processing_workflow' with runtime
+== APP - order-processor == 2024-06-27 15:52:16.064 WorkflowRuntime INFO: Registering activity 'notify_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'notify_activity' with runtime
+== APP - order-processor == 2024-06-27 15:52:16.064 WorkflowRuntime INFO: Registering activity 'requst_approval_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'requst_approval_activity' with runtime
+== APP - order-processor == 2024-06-27 15:52:16.064 WorkflowRuntime INFO: Registering activity 'verify_inventory_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'verify_inventory_activity' with runtime
+== APP - order-processor == 2024-06-27 15:52:16.064 WorkflowRuntime INFO: Registering activity 'process_payment_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'process_payment_activity' with runtime
+== APP - order-processor == 2024-06-27 15:52:16.064 WorkflowRuntime INFO: Registering activity 'update_inventory_activity' with runtime
+== APP - order-processor == INFO:WorkflowRuntime:Registering activity 'update_inventory_activity' with runtime
+== APP - order-processor == 2024-06-27 15:52:16.070 durabletask-worker INFO: Starting gRPC worker that connects to dns:127.0.0.1:41697
+== APP - order-processor == 2024-06-27 15:52:16.079 durabletask-worker INFO: Successfully connected to dns:127.0.0.1:41697. Waiting for work items...
+== APP - order-processor == item: InventoryItem(item_name=Paperclip, per_item_cost=5, quantity=100)
+== APP - order-processor == item: InventoryItem(item_name=Cars, per_item_cost=15000, quantity=100)
+== APP - order-processor == item: InventoryItem(item_name=Computers, per_item_cost=500, quantity=100)
+== APP - order-processor == ==========Begin the purchase of item:==========
+== APP - order-processor == Starting order workflow, purchasing 10 of cars
+
+termination signal received: shutting down
